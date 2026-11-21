@@ -1,4 +1,4 @@
-# PianoRoleApp
+# PianoRollApp
 
 JUCEフレームワークとC++で開発された、スタンドアロン動作のピアノロール型MIDIシーケンサーアプリケーションです。
 内蔵のサイン波シンセサイザーによるリアルタイム試聴・シーケンス再生と、標準MIDIファイル（`.mid`）への書き出しに対応しています。
@@ -27,7 +27,7 @@ JUCEフレームワークとC++で開発された、スタンドアロン動作�
 
 | コンポーネント / クラス | 役割・概要 |
 | :--- | :--- |
-| **`pianoroleApplication`** (`Main.cpp`) | アプリケーションのエントリーポイントおよびメインウィンドウ（`DocumentWindow`）の管理。 |
+| **`pianorollApplication`** (`Main.cpp`) | アプリケーションのエントリーポイントおよびメインウィンドウ（`DocumentWindow`）の管理。 |
 | **`MainComponent`** (`MainComponent.h/.cpp`) | オーディオ処理（`AudioAppComponent`）、UIレイアウト、再生状態（UIスレッド⇔オーディオスレッド間の `std::atomic` / `SpinLock` 同期）、MIDIファイル書き出しを統括。 |
 | **`NoteGridComponent`** | ノート配列（`std::vector<PianoRollNote>`）の保持、ピアノロールグリッド・ノート・プレイヘッドの描画、マウス編集イベントを処理。 |
 | **`PianoKeyboardComponent`** | `MidiKeyboardState::Listener` を継承し、鍵盤の描画・押下状態の反映・マウス演奏を処理。 |
@@ -42,7 +42,7 @@ JUCEフレームワークとC++で開発された、スタンドアロン動作�
 ```bash
 # リポジトリのクローン
 git clone https://github.com
-cd PianoRoleApp
+cd PianoRollApp
 
 # Xcodeプロジェクトを開いてビルド・実行
 open Builds/MacOSX/*.xcodeproj
